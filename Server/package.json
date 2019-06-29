@@ -2,18 +2,23 @@
   "name": "simpleflightsearch",
   "version": "1.0.0",
   "description": "Create a simple application to that can display results on a web page",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lvblazer/simpleFlightSearch.git"
   },
-  "author": "",
+  "author": "ChihYing_Chang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lvblazer/simpleFlightSearch/issues"
   },
-  "homepage": "https://github.com/lvblazer/simpleFlightSearch#readme"
+  "homepage": "https://github.com/lvblazer/simpleFlightSearch#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0"
+  }
 }
