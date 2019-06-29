@@ -1,0 +1,48 @@
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+
+            <h4> Search Result : {{ELEMENT_DATA?.legnth || '0'}}</h4>
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Flight Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                  </ng-container>
+
+                <ng-container matColumnDef="departure">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Departing </th>
+                  <td mat-cell *matCellDef="let element"> {{element.departure}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="arrival">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Arriving </th>
+                  <td mat-cell *matCellDef="let element"> {{element.arrival}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="travelTime">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Travel Time </th>
+                  <td mat-cell *matCellDef="let element"> {{element.travelTime}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="distance">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Distance </th>
+                  <td mat-cell *matCellDef="let element"> {{element.distance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="flightNumber">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Flight Details </th>
+                    <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
+                  </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
