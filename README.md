@@ -9,7 +9,14 @@ Before running the application, Please make sure you have Angular(8.0.6), Node(1
 
 1. Backend
 
+Type the following commands.
 
+```
+cd Server
+npm install
+node server.js
+```
+When 'Server started on port 3000' shows in the terminal, the server runs successfully.
 
 2. Frontend
 
