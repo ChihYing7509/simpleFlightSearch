@@ -15,7 +15,6 @@ export class ResultsComponent implements OnInit {
   displayedColumns: string[] = ['status', 'departure', 'arrival', 'travelTime', 'distance', 'flightNumber'];
   dataSource = new MatTableDataSource([]);
   length = 0;
-  show = length != 0;
 
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -27,7 +26,6 @@ export class ResultsComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,) {
-      console.log("results page");
 
      if (this.router.getCurrentNavigation().extras.state) {
       let data = this.router.getCurrentNavigation().extras.state.res;
@@ -47,7 +45,7 @@ export class ResultsComponent implements OnInit {
      }
   }
 
-
-
-
+  show() {
+    return this.length === 0;
+  }
 }

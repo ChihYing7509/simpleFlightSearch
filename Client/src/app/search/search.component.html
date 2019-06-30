@@ -11,19 +11,21 @@
         </div>
         <div class="col-md-7 col-md-offset-1">
           <div class="booking-form">
-            <form #f="ngForm" (ngSubmit)="searchFlight(f)" >
+            <form #f="ngForm" (ngSubmit)="searchFlight(f)" novalidate>
 
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <span class="form-label">Flying from</span>
-                    <input class="form-control" name="from" ngModel type="text" maxlength="3" placeholder="Airport Codes" required>
+                    <input class="form-control" name="from" ngModel type="text" pattern="[A-Za-z]{3}" maxlength="3" placeholder="Airport Codes" (change)="orgOnChange()">
+                    <p *ngIf="orgError" class="error">{{orgError}}</p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <span class="form-label">Flyning to</span>
-                    <input class="form-control" name="to" ngModel type="text" pattern="[A-Za-z]{3}" maxlength="3"  placeholder="Airport Codes" required>
+                    <input class="form-control" name="to" ngModel type="text" pattern="[A-Za-z]{3}" maxlength="3"  placeholder="Airport Codes" (change)="dstOnChange()">
+                    <p *ngIf="dstError" class="error">{{dstError}}</p>
                   </div>
                 </div>
               </div>
@@ -44,7 +46,8 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <span class="form-label">Departing</span>
-                    <input class="form-control" name="date" ngModel type="date" required>
+                    <input class="form-control" name="date" ngModel type="date" (change)="dateOnChange()" required>
+                    <p *ngIf="dateError" class="error">{{dateError}}</p>
                   </div>
                 </div>
               </div>

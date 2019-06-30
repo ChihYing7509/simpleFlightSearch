@@ -55,6 +55,11 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
 
+            <div *ngIf="show()" class="nofound">
+              <p class="title">No flights found</p>
+              <p class="sub">We're unable to find any flights matching your search!</p>
+            </div>
+
       </div>
     </div>
   </div>

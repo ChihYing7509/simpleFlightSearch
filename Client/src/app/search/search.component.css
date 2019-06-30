@@ -192,3 +192,8 @@
 	font-size: 22px;
 	color: #191a1e;
 }
+
+.error {
+  color: #FC3C3C;
+  font-size: 12px;
+}

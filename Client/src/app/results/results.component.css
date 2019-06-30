@@ -37,3 +37,17 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
+.nofound {
+  text-align: center;
+}
+
+.nofound .title {
+  font-weight: 100;
+  font-size: 40px;
+  margin: 15px;
+}
+
+.nofound .sub {
+  font-weight: 100;
+  font-size: 20px;
+}
