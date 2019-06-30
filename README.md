@@ -32,3 +32,9 @@ https://material.angular.io/components/table/overview
 3. CORS problem of the server configuration
 https://github.com/angular/angular/issues/6583
 https://medium.com/@jpatwa/node-js-express-cors-api-call-in-angular-6-937e50a4f9ff
+4. maxlength ignored for input type=“number” in Chrome
+https://stackoverflow.com/questions/18510845/maxlength-ignored-for-input-type-number-in-chrome
+5. Moment format
+https://momentjscom.readthedocs.io/en/latest/moment/04-displaying/01-format/
+6. 21 Free Booking Form Templates To Help You Serve Better 2019
+https://colorlib.com/wp/free-booking-form-templates/

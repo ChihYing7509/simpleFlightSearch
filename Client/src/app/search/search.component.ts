@@ -3,6 +3,7 @@ import { SearchService } from '../../services/search.service';
 import { HttpClient } from "@angular/common/http";
 import { Router, NavigationExtras } from '@angular/router';
 import { Flight } from '../../models/flight';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -18,12 +19,12 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchFLight() {
+  searchFlight(f: NgForm) {
 
-    let num = "2005";
-    let org = "";
-    let dst = "";
-    let date ="2018-01-31";
+    let num = f.value.flight;
+    let org = f.value.from;
+    let dst = f.value.to;
+    let date =f.value.date;
 
     this.searchSearvice.getFlightResults(num, org, dst, date).subscribe(
       (res : Flight[]) => {

@@ -15,7 +15,7 @@ export class ResultsComponent implements OnInit {
   displayedColumns: string[] = ['status', 'departure', 'arrival', 'travelTime', 'distance', 'flightNumber'];
   dataSource = new MatTableDataSource([]);
   length = 0;
-
+  show = length != 0;
 
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
