@@ -5,13 +5,13 @@ import { MatTableModule, MatSortModule } from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
+import { SearchService } from '../services/search.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { ResultsComponent } from './results/results.component';
     MatTableModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

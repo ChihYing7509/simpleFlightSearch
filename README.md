@@ -27,5 +27,8 @@ Create a pull request once you have it working. I will clone your repository, ve
 ### Referance 
 1. Bootstrap table sort
 https://mdbootstrap.com/docs/jquery/tables/sort/
-2. Free booking form template
-https://colorlib.com/wp/free-booking-form-templates/
+2. Angular material table
+https://material.angular.io/components/table/overview
+3. CORS problem of the server configuration
+https://github.com/angular/angular/issues/6583
+https://medium.com/@jpatwa/node-js-express-cors-api-call-in-angular-6-937e50a4f9ff

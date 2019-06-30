@@ -1,46 +1,57 @@
 <div id="booking" class="section">
   <div class="section-center">
     <div class="container">
+      <div style="overflow: hidden;">
+          <h4 style="float: left;"> Search Result : {{length}}</h4>
+          <h5 style="float: right;">* Click a header to change the sort order!</h5>
+      </div>
       <div class="row">
-
-            <h4> Search Result : {{ELEMENT_DATA?.legnth || '0'}}</h4>
             <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
                 <ng-container matColumnDef="status">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Flight Status </th>
-                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                    <td mat-cell *matCellDef="let element" style="text-align: center; color: #CB4335;"> {{element.status}} </td>
                   </ng-container>
 
                 <ng-container matColumnDef="departure">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Departing </th>
-                  <td mat-cell *matCellDef="let element"> {{element.departure}} </td>
+                  <td mat-cell *matCellDef="let element">
+                      <small style="font-weight: 400;">{{element.departuredate}}</small> <br>
+                      {{element.departuretime}} <br>
+                      <small style="font-weight: 400;">From: {{element.origin}}</small>
+                    </td>
                 </ng-container>
 
                 <ng-container matColumnDef="arrival">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Arriving </th>
-                  <td mat-cell *matCellDef="let element"> {{element.arrival}} </td>
+                  <td mat-cell *matCellDef="let element">
+                      <small style="font-weight: 400;">{{element.arrivaldate}}</small> <br>
+                      {{element.arrivaltime}} <br>
+                    <small style="font-weight: 400;">To: {{element.destination}}</small>
+                  </td>
                 </ng-container>
 
                 <ng-container matColumnDef="travelTime">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Travel Time </th>
-                  <td mat-cell *matCellDef="let element"> {{element.travelTime}} </td>
+                  <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="distance">
                   <th mat-header-cell *matHeaderCellDef mat-sort-header> Distance </th>
-                  <td mat-cell *matCellDef="let element"> {{element.distance}} </td>
+                  <td mat-cell *matCellDef="let element"> {{element.distance}} m </td>
                 </ng-container>
 
                 <ng-container matColumnDef="flightNumber">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Flight Details </th>
-                    <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
+                    <td mat-cell *matCellDef="let element">
+                        <small style="font-weight: 400;">Flight: </small>{{element.carrier}}{{element.flightNumber}} <br>
+                        <small style="font-weight: 400;">Aircraft:  </small> {{element.aircraft}}
+                    </td>
                   </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
               </table>
-
-
 
       </div>
     </div>
