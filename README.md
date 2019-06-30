@@ -5,6 +5,13 @@
 
 ## 0. How to run the application
 
+Before running the application, Please make sure you have Angular(8.0.6), Node(10.16.0) and Express installed.
+
+1. Backend
+
+
+
+2. Frontend
 
 
 ## 1. Task:
