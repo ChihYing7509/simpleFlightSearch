@@ -7,7 +7,7 @@
 
 Before running the application, Please make sure you have Angular(8.0.6), Node(10.16.0) and Express installed.
 
-1. Backend
+#### 1. Backend
 
 Type the following commands.
 
@@ -18,8 +18,16 @@ node server.js
 ```
 When 'Server started on port 3000' shows in the terminal, the server runs successfully.
 
-2. Frontend
+#### 2. Frontend
 
+Back to the root directory, type the following commands.
+
+```
+cd Client
+npm install
+npm start
+```
+After 'Compiled successfully.' shows in the terminal, open your browser on http://localhost:4200/
 
 ## 1. Task:
 
